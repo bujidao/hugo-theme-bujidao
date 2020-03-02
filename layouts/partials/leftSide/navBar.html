@@ -1,0 +1,23 @@
+<div id="navBar" class="navBar theme-box-style">
+  <div class="title">
+    <a href="{{ "/" | relLangURL }}" class="logo">
+      {{- if .Site.Params.logoTitle -}}
+        {{ .Site.Params.logoTitle }}
+      {{- else -}}
+        {{ .Site.Title }}
+      {{- end -}}
+    </a>
+  </div>
+  <nav id="menu" class="menu">
+    <ul class="menu-list">
+      {{ range .Site.Menus.main -}}
+        <a href="{{ .URL | safeURL }}">
+          <li class="menu-item">
+            <span class="icon fa-{{ .Identifier }} icon-style"></span>
+            {{ .Name }}
+          </li>
+        </a>
+      {{- end }}
+    </ul>
+  </nav>
+</div>

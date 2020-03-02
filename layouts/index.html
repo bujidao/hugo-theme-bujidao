@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+		<title>Welcome To {{ .Title }}</title>
+		{{ partial "head.html" }}
+	</head>
+	<body class="loading" style="user-select: none;">
+		<div id="wrapper">
+			<div id="bg" {{ with .Site.Params.bg_scroll}} class="no-scroll" {{end}}></div>
+			<div id="overlay">
+        {{ partial "welcome.html" . }}
+      </div>
+			<div id="main">
+
+        <!-- Blog Body -->
+				<div class="container">
+					<div class="row">
+						<div class="col-md-3" style="padding: 0 10px;">
+							{{ partial "leftSide/navBar.html" . }}
+							{{ partial "leftSide/sideBar.html" . }}
+						</div>
+						<div class="col-md-9" style="padding: 0 10px;">
+							{{ partial "blogBody.html" }}
+						</div>
+					</div>
+					
+				</div>
+
+				<!-- Footer -->
+        {{ partial "footer/copyright.html" . }}
+
+			</div>
+		</div>
+		<!--[if lte IE 8]><script src="js/ie/respond.min.js"></script><![endif]-->
+		<script>
+			window.onload = function() { 
+        document.body.className = '';
+        var url = window.location.href
+        if (url == "http://localhost:1313/") {
+          document.getElementById('overlay').style.display = "none"
+        }
+      }
+			window.ontouchmove = function() { return false; }
+			window.onorientationchange = function() { document.body.scrollTop = 0; }
+		</script>
+	</body>
+</html>

@@ -1,0 +1,39 @@
+title = "Bujidao's Blog"
+description = ""
+
+[params]
+  name = "BUJIDAO"
+  author = "Alex Ceng"
+  bio = "Just because of you appears in my dream, I slept a little longer."
+  avatar = "img/avatar.gif"
+  since = "2018"
+
+[[params.social]]
+  medium = "Github"
+  icon = "github"
+  link = "buidao.github.com"
+[[params.social]]
+  medium = "Email"
+  icon = "envelope-o"
+  link = "izengjing.cn@gmail.com"
+
+[[menu.main]]
+  name = "Home"
+  weight = 10
+  identifier = "home"
+  url = "/"
+[[menu.main]]
+  name = "Archives"
+  weight = 20
+  identifier = "bank"
+  url = "/post/"
+[[menu.main]]
+  name = "Tags"
+  weight = 30
+  identifier = "tags"
+  url = "/tags/"
+[[menu.main]]
+  name = "Categories"
+  weight = 40
+  identifier = "tasks"
+  url = "/categories/"

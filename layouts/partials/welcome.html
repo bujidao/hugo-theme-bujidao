@@ -1,0 +1,18 @@
+<section id="welcome">
+  <welcome>
+    <h1>{{ .Site.Params.name | safeHTML }}</h1>
+    <p>{{ .Site.Params.bio | safeHTML }}</p>
+    <nav>
+      <ul>
+        {{ range .Site.Params.social }}
+        <li><a href="{{ .link | safeURL }}" class="icon fa-{{ .icon }}"><span class="label">{{ .medium }}</span></a></li>
+        {{ end }}
+      </ul>
+    </nav>
+    <div class="start-wrapper">
+      <span class="start">
+        Start
+      </span>
+    </div>
+  </welcome>
+</section>

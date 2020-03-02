@@ -1,0 +1,31 @@
+<header id="sideBar" class="theme-box-style">
+  <div class="user-info">
+    <div class="avatar-wrapper">
+      <img src="{{ .Site.Params.avatar | safeHTML }}" alt="{{ .Site.Params.name | safeHTML }}" class="img-rounded">
+    </div>
+    <h4>{{ .Site.Params.author | safeHTML }}</h4>
+    <p>{{ .Site.Params.bio | safeHTML }}</p>
+  </div>
+  <div class="article-summary">
+    <ul class="summary-list">
+      <a href="">
+        <li class="summary-item">
+          <div class="count">23</div>
+          <div class="name">文章</div>
+        </li>
+      </a>
+      <a href="">
+        <li class="summary-item">
+          <div class="count">23</div>
+          <div class="name">文章</div>
+        </li>
+      </a>
+      <a href="">
+        <li class="summary-item">
+          <div class="count">23</div>
+          <div class="name">文章</div>
+        </li>
+      </a>
+    </ul>
+  </div>
+</header>

@@ -1,0 +1,13 @@
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<link href="https://cdn.staticfile.org/twitter-bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
+<script src="https://cdn.staticfile.org/jquery/2.1.1/jquery.min.js"></script>
+<script src="https://cdn.staticfile.org/twitter-bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<!--[if lte IE 8]><script src="js/ie/html5shiv.js"></script><![endif]-->
+<link rel="stylesheet" href="css/index.min.css" />
+<!--[if lte IE 8]><link rel="stylesheet" href="css/_common/ie8.css" /><![endif]-->
+<!--[if lte IE 9]><link rel="stylesheet" href="css/_common/ie9.css" /><![endif]-->
+{{ with .Site.Params.favicon }}
+  <link rel="shortcut icon" type="image/x-icon" href="{{ . | absURL }}">
+  <link rel="icon" type="image/x-icon" href="{{ . | absURL }}">
+{{ end }}
